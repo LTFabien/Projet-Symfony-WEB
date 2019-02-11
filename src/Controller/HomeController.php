@@ -21,4 +21,11 @@ class HomeController
     public function homepage(){
         return new Response("OMG my first Symfony page!!!");
     }
+
+    /**
+     * @Route("/article/{articleID}")
+     */
+    public function read($articleID){
+        return new Response("Voici l'article ".$articleID);
+    }
 }
